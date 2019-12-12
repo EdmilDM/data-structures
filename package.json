@@ -1,0 +1,14 @@
+{
+  "name": "data-structures",
+  "version": "1.0.0",
+  "description": "My implementations of different data structures in JS.",
+  "main": "index.js",
+  "author": "Edmil Di Massimo",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-google": "^0.14.0"
+  }
+}
