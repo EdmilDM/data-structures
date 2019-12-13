@@ -1,14 +1,14 @@
 const Node = require('../base_elements/node');
 
-class Queue {
+class Stack {
   constructor() {
     this.head = null;
     this.length = 0;
   }
 
-  getQueue() {
+  getStack() {
     if (!this.head) {
-      console.log('Queue is empty.');
+      console.log('Stack is empty.');
     } else {
       let auxNode = this.head;
       while (auxNode) {
@@ -22,25 +22,21 @@ class Queue {
     if (!this.head) {
       this.head = new Node(value, null);
     } else {
-      let auxNode = this.head;
-      while (auxNode.next) {
-        auxNode = auxNode.next;
-      }
-      auxNode.next = new Node(value, null);
+      this.head = new Node(value, this.head);
     }
     this.length++;
   }
 
   pop() {
     if (this.length) {
-      const returnValue =this.head.value;
+      const returnValue = this.head.value;
       this.head = this.head.next;
       this.length--;
       return returnValue;
     } else {
-      console.log('No elements in queue.');
+      console.log('No elements in stack.');
     }
   }
 }
 
-module.exports = Queue;
+module.exports = Stack;
