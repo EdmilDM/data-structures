@@ -12,7 +12,7 @@ class LinkedList {
     } else {
       let auxNode = this.head;
       while (auxNode) {
-        console.log(auxNode.value);
+        console.log(auxNode);
         auxNode = auxNode.next;
       }
     }
